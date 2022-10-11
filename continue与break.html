@@ -1,0 +1,27 @@
+<script>
+    // continue 退出本次（当前次的循环） 继续执行剩余次数循环
+    for (let i = 1; i <= 5; i++) {
+        if (i == 3) {
+            continue //只要遇到 continue 就退出本次循环 直接跳到 i++
+        }
+        console.log("我正在吃第" + i + "个包子")
+    }
+
+    // 求1~100之间，除了能被7整除之外的整数和
+    let sum = 0
+    for (i = 1; i <= 100; i++) {
+        if (i % 7 == 0) {
+            continue
+        }
+        sum += i
+    }
+    console.log(sum)
+
+    // break 立即跳出整个循环（循环结束）
+    for (let i = 1; i <= 5; i++) {
+        if (i == 3) {
+            break
+        }
+        console.log("我正在吃第" + i + "个包子")
+    }
+</script>
