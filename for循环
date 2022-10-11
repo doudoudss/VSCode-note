@@ -4,3 +4,6 @@ for (begin; condition; step) {
 begin：开始时执行。
 condition：每轮循环前判断， true 则执行代码， false 结束循环。
 step：每轮循环后执行。
+
+双重for循环：
+外层循环一次，里层循环全部。
