@@ -1,0 +1,81 @@
+<script>
+    // 1.求1-100之间所有数的总和平均值
+    let sum = 0
+    for (let num = 1; num <= 100; num++) {
+        sum += num
+    }
+    let average = sum / 100
+    console.log(average)
+
+    // 2.求1-100之间所有偶数的和
+    let sum1 = 0
+    for (let num = 1; num <= 100; num++) {
+        if (num % 2 == 0) {
+            sum1 += num
+        }
+    }
+    console.log(sum1)
+
+    // 3.求100以内7的倍数的总和
+    let sum2 = 0
+    for (let num = 1; num <= 100; num++) {
+        if (num % 7 == 0) {
+            sum2 += num
+        }
+    }
+    console.log(sum2)
+
+    // 4.用for循环打印矩形
+    let stars1 = ""
+    for (let i = 1; i <= 4; i++) {
+        for (let j = 1; j <= 5; j++) {
+            stars1 += "⭐"
+        }
+        stars1 += "\n"
+    }
+    console.log(stars1)
+
+    // 5.使用for循环打印三角形
+    let stars2 = ""
+    for (let i = 1; i <= 4; i++) {
+        for (let j = 1; j <= i; j++) {
+            stars2 += "⭐"
+        }
+        stars2 += "\n"
+    }
+    console.log(stars2)
+
+    // 6.使用for循环打印99乘法表
+    let list = ""
+    let a = 0
+    let result
+    for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= i; j++) {
+            a++
+            result = a * j
+            list += j + "x" + a + "=" + result + "\t"
+        }
+        a = 0
+        list += "\n"
+    }
+    console.log(list)
+
+    // 7.接受用户输入的用户名和密码，若用户名为“admin”，密码为“123456”，则提示用户登录成功！否则，让用户一直输入。
+    let userName = prompt("请输入用户名")
+    let passwords = prompt("请输入密码")
+    while (userName != "admin" || passwords != "123456") {
+        userName = prompt("请输入用户名")
+        passwords = prompt("请输入密码")
+    }
+    alert("登录成功！")
+
+    // 8.求整数1-100的累加值，但要求跳过所有个位数为3的数（用continue实现）
+    let sum8 = 0
+    for (let i = 1; i <= 100; i++) {
+        if ((i - 3) % 10 == 0) {
+            continue
+        }
+        sum8 += i
+    }
+    console.log(sum8)
+</script>
