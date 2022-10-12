@@ -1,0 +1,143 @@
+<script>
+    // 1.数组：就是一组数据的集合
+
+    // 2.利用 new 创建数组
+    var arr = new Array() //创建了一个空的数组
+
+    // 3.利用数组字面量创建数组 []
+    var arr = [] //创建了一个空的数组
+    var arr1 = [1, 2, "pink", true]
+
+    // 4.数组里面的数据一定用逗号分隔
+    // 5.数组里面的数据，称为数组元素
+    // 6.数组里面数据的类型没有限制
+
+    // 7.获取数组元素  格式：数组名[索引号]  索引号从 0 开始的
+    console.log(arr1)
+    console.log(arr1[2]) //'pink'
+
+    // 8.遍历数组
+    // 因为数组索引号号从 0 开始，所以i必须从 0 开始
+    // 输出的时候 arr[i] , i 计数器当作索引号来用
+    for (var i = 0; i <= 3; i++) {
+        console.log(arr1[i])
+    }
+
+    // 9.数组长度 是元素的个数 不要和索引号混淆
+    // arr.length 动态检测数组元素的个数
+    console.log(arr1.length)
+    for (var i = 0; i < arr1.length; i++) {
+        console.log(arr1[i])
+    }
+
+    // 10.数组求和及平均值
+    let arr2 = [2, 6, 1, 7, 4]
+    let sum = 0
+    for (let i = 0; i < arr2.length; i++) {
+        sum += arr2[i]
+    }
+    let average = sum / arr2.length
+    console.log(sum, average) //想要输出多个变量 用逗号分割即可
+
+    // 11.求数组最大值
+    let arr3 = [2, 6, 1, 77, 4, 23, 12]
+    let max = arr3[0]
+    for (let i = 0; i < arr3.length; i++) {
+        if (max < arr3[i]) {
+            max = arr3[i]
+        } else {
+            max = max
+        }
+    }
+    console.log(max)
+
+    // 12.数组转换为分割字符串
+    let arr4 = ["red", "green", "blue", "pink"]
+    let stringArr4 = ""
+    for (let i = 0; i < arr4.length; i++) {
+        stringArr4 += arr4[i] + "|"
+    }
+    console.log(stringArr4)
+
+    // 13.新增数组元素，修改 length 长度
+    let arr5 = [2, 6, 12]
+    console.log(arr5)
+    arr5.length = 5 //把数组长度修改为 5 ，里面应该有 5 个元素
+    console.log(arr5)
+    console.log(arr5[3])
+    console.log(arr5[4])
+
+    // 14.新增数组元素，修改索引号 追加数组元素
+    let arr6 = [2, 6, 12]
+    arr6[3] = "pink"
+    console.log(arr6)
+    arr6[4] = "red"
+    console.log(arr6)
+    arr6[0] = "happy" //这里是替换原来数组的元素
+    console.log(arr6)
+    arr6 = "有点意思" //不要直接给数组名赋值 会覆盖掉以前的数据
+    console.log(arr6)
+
+    //15.数组新增元素
+    let arr7 = new Array() //建立一个新的数组
+    for (i = 1; i <= 10; i++) {
+        arr7[i - 1] = i
+    }
+    console.log(arr7)
+
+    // 16.筛选新数组：将 arr8 中大于等于 10 的元素选出来，放入新数组
+    let arr8 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    let arr9 = [] //建立一个新的数组
+    let a = 0
+    for (let i = 0; i < arr8.length; i++) {
+        if (arr8[i] >= 10) {
+            //新数组应该从 0 开始，依次递增
+            arr9[a] = arr8[i]
+            a++
+        }
+    }
+    console.log(arr9)
+    //方法2
+    let arr10 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    let arr11 = [] //建立一个新的数组
+    //刚开始 arr11.length 为 0
+    for (let i = 0; i < arr10.length; i++) {
+        if (arr10[i] >= 10) {
+            //新数组应该从 0 开始，依次递增
+            arr11[arr11.length] = arr10[i]
+        }
+    }
+    console.log(arr11)
+
+    // 17.删除指定数组元素：0 去掉，形成一个新的数组
+    let arr17 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    let arr17New = new Array()
+    for (let i = 0; i < arr17.length; i++) {
+        if (arr17[i] != 0) {
+            arr17New[arr17New.length] = arr17[i]
+        }
+    }
+    console.log(arr17New)
+
+    // 18.翻转数组
+    let arr18 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    let arr18New = []
+    for (let i = arr18.length - 1; i >= 0; i--) {
+        arr18New[arr18New.length] = arr18[i]
+    }
+    console.log(arr18New)
+
+    // 19.冒泡排序（数组排序）
+    let arr19 = [5, 4, 3, 2, 1]
+    for (i = 0; i < arr19.length; i++) {
+        //外层循环管趟数
+        for (j = 0; j < arr19.length - i; j++) {
+            if (arr19[j] > arr19[j + 1]) {
+                let temp = arr19[j]
+                arr19[j] = arr19[j + 1]
+                arr19[j + 1] = temp
+            }
+        }
+    }
+    console.log(arr19)
+</script>
